@@ -36,7 +36,7 @@ resource "aws_vpc" "myvpc" {
 # and we intialize our project by entering that folder
 # and write the command "terraform init"
 # this command will pull the plugin from the provider and set up a state file
-# then "".terraform" folder wil be created with a bundel of files
+# then ".terraform" folder wil be created with a bundel of files
 # then you can type "terraform plan" so terraform will prepare a plan to execute showing
 # a lot of details which represente the resources going to be created
 # then you can type "terraform apply"

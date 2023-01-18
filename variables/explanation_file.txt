@@ -1,0 +1,15 @@
+Step 5:
+- we create a folder called "variables"; with which we are a way of setting a value that we can use multiple times in too many different files.
+- so instead of going back to change all those files, it's better to do it this way
+- so do to so, inside that "variables" folder, we should create a .tf file called "main"
+- and there we declare our variables
+
+
+Step 6:
+- how we declare variables
+
+Step 7:
+- how to use variables
+
+Step 8:
+- how to use Input variables
