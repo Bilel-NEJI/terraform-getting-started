@@ -42,3 +42,10 @@ Step 13:
 Step 14:
 - how to work with built-in functions
 - there are too many functions that we can check in the offcial documentation
+
+Step 15:
+- how to work with terraform versioning
+- "=" : exact version equal
+- "!=" : version not equal
+- ">", ">=", "<", "<=" : version comparison
+- "~>" : pessimistic constraint operator
