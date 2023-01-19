@@ -13,3 +13,7 @@ Step 7:
 
 Step 8:
 - how to use Input variables
+
+Step 9:
+- how to use Output and Attributes at the same time
+- we will continue in the variables/main.tf file

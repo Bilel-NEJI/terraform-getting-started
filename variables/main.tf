@@ -83,16 +83,27 @@ resource "aws_vpc" "myvpc" {
   #   Name = var.vpcname
   # }
 
+# part of Step 8 inside Step 7 (applied on some part of Step 7):
   tags = {
     Name = var.inputname
   }
 
+# part of Step 7:
 #   tags = {
 #     Name = var.mylist[0]
 #   }
-
+# part of Step 7:
 #   tags = {
 #     Name = var.mymap["Key1"]
 #   }
 
+}
+
+# Step 9:
+# the advantages of tghe output is that it shows us details about the resources we have created
+# after writing the output, when we type "terraform apply", we'll get the value of the "id"
+# and the reason it won't work in "terraform plan" is because we haven't actually created the vpc, it's a computed value. So to run it type "Terraform apply"
+# to destroy the resources just type "terraform destroy"
+output "vpcid" {
+  value = aws_vpc.myvpc.id
 }
