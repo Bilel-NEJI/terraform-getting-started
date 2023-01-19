@@ -1,3 +1,6 @@
+Step 1 --> Step 4:
+- in the folder "first-resource"
+
 Step 5:
 - we create a folder called "variables"; with which we are a way of setting a value that we can use multiple times in too many different files.
 - so instead of going back to change all those files, it's better to do it this way
@@ -25,3 +28,8 @@ Step 10:
 
 Step 11:
 - how to use tuples and objects
+
+Step 12:
+- how to work with dependencies
+- for this we need an AMI id before we start because we are going to be spinning up en EC2 isntance
+- each AMI will be different per region
