@@ -13,14 +13,14 @@ provider "aws" {
 # here we are decalring our/some varaibles
 # here is a String variable
 variable "vpcname" {
-  type = string
+  type    = string
   default = "myvpc"
 }
 
 # Step 6:
 # here is a number/integer variable
 variable "sshport" {
-  type = number
+  type    = number
   default = 22
 }
 
@@ -32,18 +32,18 @@ variable "enabled" {
 }
 
 # Step 6:
-# here is a List variable
+# here is a List variable, it can hold only "string" or "number"
 # a list can be used for example for firewall rules
 # the list index always starts with "zero"; so index "0" gives us "Value1"
 variable "mylist" {
-  type = list()
+  type    = list()
   default = ["Value1", "Value2"]
 }
 
 # Step 6:
 # here is a Map variable
 variable "mymap" {
-  type = map
+  type = map(any)
   default = {
     Key1 = "Value1"
     Key2 = "Value2"
@@ -53,7 +53,7 @@ variable "mymap" {
 # Step 8:
 # what it does, it gives a chance for you to use it manually set a variable when we run "terraform plan"
 variable "inputname" {
-  type = string
+  type        = string
   description = "Set the name of the VPC"
   # then we can use it like so:
   # resource "aws_vpc" "myvpc" {
@@ -77,25 +77,25 @@ variable "inputname" {
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/16"
 
-# this the first example in Step 7
-# this will be changed to use the Step 8 input variable
+  # this the first example in Step 7
+  # this will be changed to use the Step 8 input variable
   # tags = {
   #   Name = var.vpcname
   # }
 
-# part of Step 8 inside Step 7 (applied on some part of Step 7):
+  # part of Step 8 inside Step 7 (applied on some part of Step 7):
   tags = {
     Name = var.inputname
   }
 
-# part of Step 7:
-#   tags = {
-#     Name = var.mylist[0]
-#   }
-# part of Step 7:
-#   tags = {
-#     Name = var.mymap["Key1"]
-#   }
+  # part of Step 7:
+  #   tags = {
+  #     Name = var.mylist[0]
+  #   }
+  # part of Step 7:
+  #   tags = {
+  #     Name = var.mymap["Key1"]
+  #   }
 
 }
 
@@ -107,4 +107,21 @@ resource "aws_vpc" "myvpc" {
 # to display all the outputs type "terraform output"
 output "vpcid" {
   value = aws_vpc.myvpc.id
+}
+
+# Step 11: tuple
+# inside the tuple we can define the data type we need
+variable "mytuple" {
+  type    = tuple([string, number, string])
+  default = ["cat", 1, "dog"]
+}
+
+# Step 11: object
+# inside the object we can structure multiple data types
+variable "myobject" {
+  type = object({name = string, port = list(number)})
+  default = {
+    name = "Bilel"
+    port = [ 22, 25, 80 ]
+  }
 }

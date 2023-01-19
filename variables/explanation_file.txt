@@ -22,3 +22,6 @@ Step 10:
 - how to use dynamic blocks
 - dynamic blocks are a way you can create reusable portions of code and do so dynamically
 - we are going to use the file "main.tf" inside the folder "dynamic"
+
+Step 11:
+- how to use tuples and objects
