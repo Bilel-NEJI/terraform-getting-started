@@ -38,3 +38,7 @@ Step 13:
 - hwo to work with datasources
 - datasources are a way terraform can query AWS and return a result
 - essentially what datasources do; is you make an API request to get information, so they don't set anything up
+
+Step 14:
+- how to work with built-in functions
+- there are too many functions that we can check in the offcial documentation
