@@ -33,3 +33,8 @@ Step 12:
 - how to work with dependencies
 - for this we need an AMI id before we start because we are going to be spinning up en EC2 isntance
 - each AMI will be different per region
+
+Step 13:
+- hwo to work with datasources
+- datasources are a way terraform can query AWS and return a result
+- essentially what datasources do; is you make an API request to get information, so they don't set anything up
