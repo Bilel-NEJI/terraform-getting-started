@@ -104,6 +104,7 @@ resource "aws_vpc" "myvpc" {
 # after writing the output, when we type "terraform apply", we'll get the value of the "id"
 # and the reason it won't work in "terraform plan" is because we haven't actually created the vpc, it's a computed value. So to run it type "Terraform apply"
 # to destroy the resources just type "terraform destroy"
+# to display all the outputs type "terraform output"
 output "vpcid" {
   value = aws_vpc.myvpc.id
 }
