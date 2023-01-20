@@ -56,3 +56,12 @@ Step 16:
 - to understand the situation, we should know that if we have a terraform folder that has many files inside of it, and when we type "terraform apply", terraform will set everything in there
 - and what modules do, is that they allow us to use create blocks of reusable code
 - for this we create a folder called "modules", "main.tf", and "db.tf"
+
+Step 17:
+- terraform provider: multi-provider setup
+- we are going to work with the folder "providers"
+- there are two ways to set up multiple providers
+- we need to make terraform providers available, and to do so we have to type "terraform init", and that's how terraform pulls in the plugins
+- in this step, we are going to use two providers: "aws" and "vault" which is a solution to manage secrets (passwords, usernames, tokens, etc)
+- the 1st way to setup multi-providers is to declare in the .tf file the provider and the resource that we are going to use, see the "main.tf" file
+- the 2nd way to setup multi-providers is to declare 
