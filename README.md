@@ -7,7 +7,6 @@ Step 5:
 - so do to so, inside that "variables" folder, we should create a .tf file called "main"
 - and there we declare our variables
 
-
 Step 6:
 - how we declare variables
 
@@ -64,4 +63,4 @@ Step 17:
 - we need to make terraform providers available, and to do so we have to type "terraform init", and that's how terraform pulls in the plugins
 - in this step, we are going to use two providers: "aws" and "vault" which is a solution to manage secrets (passwords, usernames, tokens, etc)
 - the 1st way to setup multi-providers is to declare in the .tf file the provider and the resource that we are going to use, see the "main.tf" file
-- the 2nd way to setup multi-providers is to declare 
+- the 2nd way to setup multi-providers is to declare a second aws provider and "alias" & "provider" words
