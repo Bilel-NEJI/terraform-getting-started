@@ -49,3 +49,10 @@ Step 15:
 - "!=" : version not equal
 - ">", ">=", "<", "<=" : version comparison
 - "~>" : pessimistic constraint operator
+
+Step 16:
+- how to work with modules
+- a module is in its simpliest form is a folder that contains other terraform files
+- to understand the situation, we should know that if we have a terraform folder that has many files inside of it, and when we type "terraform apply", terraform will set everything in there
+- and what modules do, is that they allow us to use create blocks of reusable code
+- for this we create a folder called "modules", "main.tf", and "db.tf"
